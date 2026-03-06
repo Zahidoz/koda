@@ -5,6 +5,7 @@ import Features from './components/Features'
 import Course from './components/Course'
 import Teacber from './components/Teacber'
 import Pricing from './components/Pricing'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Course />
       <Teacber/>
       <Pricing />
+      <Contact />
       <Footer />
     </div>
   )
