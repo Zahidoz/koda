@@ -5,6 +5,7 @@ import Features from './components/Features'
 import Course from './components/Course'
 import Teacber from './components/Teacber'
 import Pricing from './components/Pricing'
+import Footer from './components/Footer'
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Course />
       <Teacber/>
       <Pricing />
+      <Footer />
     </div>
   )
 }
