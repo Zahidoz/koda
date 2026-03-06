@@ -51,28 +51,3 @@ body {
   box-shadow: 0 0 0 0.5px color-mix(in srgb, var(--color-primary) 5%, transparent);
 }
 
-/* Hero floating animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
-}
-
-@keyframes floatSlow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33%       { transform: translateY(-8px) rotate(1deg); }
-  66%       { transform: translateY(-4px) rotate(-1deg); }
-}
-
-.hero-float {
-  animation: floatSlow 6s ease-in-out infinite;
-}
-
-.hero-pill {
-  animation: float 5s ease-in-out infinite;
-}
-.hero-pill.delay-100 { animation-delay: 0.4s; }
-.hero-pill.delay-200 { animation-delay: 0.8s; }
-.hero-pill.delay-300 { animation-delay: 1.2s; }
-.hero-pill.delay-400 { animation-delay: 1.6s; }
-.hero-pill.delay-500 { animation-delay: 2.0s; }
-

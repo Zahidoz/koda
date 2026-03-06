@@ -1,14 +1,12 @@
 import React from 'react'
 import Header from './components/Header'
+import Hero from './components/Hero'
 
 export default function HomePage() {
   return (
     <div className="relative">
       <Header />
-
-      {/* Spacer for fixed header */}
-      <div className="h-20" />
-
+      <Hero />
     </div>
   )
 }
