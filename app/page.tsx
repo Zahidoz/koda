@@ -3,6 +3,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Course from './components/Course'
+import Teacber from './components/Teacber'
+import Pricing from './components/Pricing'
 
 export default function HomePage() {
   return (
@@ -11,6 +13,8 @@ export default function HomePage() {
       <Hero />
       <Features />
       <Course />
+      <Teacber/>
+      <Pricing />
     </div>
   )
 }
