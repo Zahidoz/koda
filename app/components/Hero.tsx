@@ -186,11 +186,11 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-3">
-            <Link href="#qosul" className="inline-flex items-center gap-2 bg-primary text-secondary font-semibold text-sm px-6 py-3 rounded-xl hover:bg-primary/90 transition-all duration-300 group">
+            <Link href="#contact" className="inline-flex items-center gap-2 bg-primary text-secondary font-semibold text-sm px-6 py-3 rounded-xl hover:bg-primary/90 transition-all duration-300 group">
               İndi Başla
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            <Link href="#tedris" className="inline-flex items-center gap-2 border border-white/15 text-white/80 hover:text-white hover:border-white/30 font-medium text-sm px-6 py-3 rounded-xl transition-all duration-300">
+            <Link href="#courses" className="inline-flex items-center gap-2 border border-white/15 text-white/80 hover:text-white hover:border-white/30 font-medium text-sm px-6 py-3 rounded-xl transition-all duration-300">
               Tədris Planı
             </Link>
           </div>

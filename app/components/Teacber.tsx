@@ -130,7 +130,7 @@ export default function Teacher() {
   return (
     <section
       ref={ref}
-      id="muellim"
+      id="teacher"
       className="relative px-4 sm:px-6 lg:px-8 py-28 overflow-hidden"
     >
       {/* Background */}
@@ -300,10 +300,10 @@ export default function Teacher() {
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href="#qosul"
+                href="#contact"
                 className="inline-flex items-center gap-2 bg-primary text-secondary font-bold text-sm px-6 py-3 rounded-xl hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 group"
               >
-                Zahidlə öyrən
+                Addım at
                 <ArrowRight
                   size={15}
                   className="group-hover:translate-x-1 transition-transform duration-300"
@@ -311,7 +311,7 @@ export default function Teacher() {
               </Link>
 
               <Link
-                href="#kurs"
+                href="#courses"
                 className="inline-flex items-center gap-2 border border-white/12 text-white/60 font-medium text-sm px-6 py-3 rounded-xl hover:border-white/25 hover:text-white transition-all duration-300"
               >
                 Tədris planına bax

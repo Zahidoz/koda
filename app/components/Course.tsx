@@ -141,7 +141,7 @@ export default function Course() {
   }, [])
 
   return (
-    <section id="kurs" className="relative px-4 sm:px-6 lg:px-8 py-28 overflow-hidden">
+    <section id="courses" className="relative px-4 sm:px-6 lg:px-8 py-28 overflow-hidden">
 
       {/* Background glows */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -222,7 +222,7 @@ export default function Course() {
               </div>
 
               <Link
-                href="#qosul"
+                href="#contact"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 group"
               >
                 Kursa Qeydiyyat

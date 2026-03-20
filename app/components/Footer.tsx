@@ -1,25 +1,24 @@
 import React from 'react'
 import Link from 'next/link'
-import { Github, Linkedin, Twitter, Instagram, MapPin, Mail, Phone } from 'lucide-react'
+import { Youtube, Linkedin, Instagram, MapPin, Mail, Phone } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Haqqımızda', href: '#haqqimizda' },
-  { label: 'Tədris proqramı', href: '#tedris' },
-  { label: 'Müəllim', href: '#muellim' },
-  { label: 'Qiymətlər', href: '#qiymət' },
-  { label: 'Əlaqə', href: '#elaqe' },
+  { label: 'Haqqımızda', href: '#about' },
+  { label: 'Tədris proqramı', href: '#courses' },
+  { label: 'Müəllim', href: '#teacher' },
+  { label: 'Qiymətlər', href: '#pricing' },
+  { label: 'Əlaqə', href: '#contact' },
 ]
 
 const socials = [
-  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Youtube, href: '#', label: 'Youtube' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
   { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
 ]
 
 export default function Footer() {
   return (
-    <footer id="elaqe" className="relative border-t border-white/6 overflow-hidden">
+    <footer id="footer" className="relative border-t border-white/6 overflow-hidden">
 
       {/* Subtle top glow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-48 rounded-full bg-primary/5 blur-[100px]" />
@@ -27,16 +26,16 @@ export default function Footer() {
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Main footer content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-16">
 
-          {/* LEFT — Brand + Info */}
+          {/* LEFT — Brand + Nav + Socials */}
           <div className="flex flex-col gap-8">
 
             {/* Logo & tagline */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-extrabold tracking-tight text-white">
-                  ko<span className="text-primary">da</span>
+                  koda<span className="text-primary"></span>
                 </span>
                 <div className="w-1.5 h-1.5 rounded-full bg-primary mt-0.5" />
               </div>
@@ -72,9 +71,14 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
+          </div>
 
-            {/* Contact info */}
+          {/* RIGHT — Contact info */}
+          <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-3">
+              <p className="text-white/25 text-[10px] font-bold uppercase tracking-widest">
+                Əlaqə Məlumatları
+              </p>
               <div className="flex items-center gap-2.5">
                 <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-white/5 border border-white/8 shrink-0">
                   <MapPin size={12} className="text-primary" />
@@ -90,7 +94,7 @@ export default function Footer() {
                   href="mailto:hello@koda.az"
                   className="text-white/40 text-sm hover:text-primary transition-colors duration-200"
                 >
-                  hello@koda.az
+                  info@koda.az
                 </Link>
               </div>
 
@@ -102,41 +106,8 @@ export default function Footer() {
                   href="tel:+994501234567"
                   className="text-white/40 text-sm hover:text-primary transition-colors duration-200"
                 >
-                  +994 50 123 45 67
+                  +994 50 703 37 33
                 </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT — Google Map */}
-          <div className="flex flex-col gap-4">
-            <p className="text-white/25 text-[10px] font-bold uppercase tracking-widest">
-              Ünvanımız
-            </p>
-
-            <div className="relative rounded-2xl overflow-hidden border border-white/8 bg-white/3 h-[320px] lg:h-full min-h-[280px]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.6!2d49.8671!3d40.3831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6b4f66f6fd%3A0x2d6b4de06c6c9e5c!2sCaspian%20Plaza!5e0!3m2!1sen!2saz!4v1709900000000!5m2!1sen!2saz"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: 'grayscale(1) invert(0.9) hue-rotate(180deg) brightness(0.75) contrast(0.9)' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Koda — Caspian Plaza"
-              />
-
-              {/* Address overlay chip */}
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="inline-flex items-center gap-2 bg-[#0e0e0e]/90 backdrop-blur-md border border-white/10 px-3 py-2 rounded-xl">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-primary/20 shrink-0">
-                    <MapPin size={11} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-semibold">Caspian Plaza</p>
-                    <p className="text-white/40 text-[10px]">Bakı, Azərbaycan</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

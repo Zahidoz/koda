@@ -5,10 +5,10 @@ import React, { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Məzunlar', href: '#mezunlar' },
-  { label: 'Tədris', href: '#tedris' },
-  { label: 'Haqqımızda', href: '#haqqimizda' },
-  { label: 'Əlaqə', href: '#elaqe' },
+  { label: 'Məzunlar', href: '#students' },
+  { label: 'Tədris', href: '#courses' },
+  { label: 'Haqqımızda', href: '#about' },
+  { label: 'Əlaqə', href: '#contact' },
 ]
 
 export default function Header() {
@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <Link
-          href="#qosul"
+          href="#contact"
           className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-primary border border-primary/40 hover:border-primary hover:bg-primary/10 px-5 py-2 rounded-xl transition-all duration-300"
         >
           <span className="tracking-wide">Bizə Qoşul</span>
@@ -118,7 +118,7 @@ export default function Header() {
           </Link>
         ))}
         <Link
-          href="#qosul"
+          href="#contact"
           onClick={() => setMenuOpen(false)}
           className={`
             mt-4 inline-flex items-center gap-2 text-lg font-medium text-primary border border-primary/40

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { Send, User, Phone, CheckCircle2, Loader2 } from 'lucide-react'
+import { Send, User, Phone, CheckCircle2, Loader2, MapPin } from 'lucide-react'
 
 function useInView(threshold = 0.1) {
   const [visible, setVisible] = useState(false)
@@ -60,7 +60,7 @@ export default function Contact() {
   return (
     <section
       ref={ref}
-      id="qosul"
+      id="contact"
       className="relative px-4 sm:px-6 lg:px-8 py-28 overflow-hidden"
     >
       {/* Background */}
@@ -68,7 +68,7 @@ export default function Contact() {
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[350px] rounded-full bg-primary/7 blur-[130px]" />
       </div>
 
-      <div className="relative z-10 w-full max-w-lg mx-auto flex flex-col gap-12">
+      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-12">
 
         {/* Header */}
         <div
@@ -93,7 +93,9 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Form card */}
+        {/* Form and Map Container */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Form card */}
         <div
           className={`relative rounded-2xl border border-white/8 bg-white/[0.025] transition-all duration-700 delay-150 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -178,7 +180,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="inline-flex items-center justify-center gap-2.5 w-full py-4 rounded-xl bg-primary text-secondary font-bold text-sm hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed group"
+                className="cursor-pointer inline-flex items-center justify-center gap-2.5 w-full py-4 rounded-xl bg-primary text-secondary font-bold text-sm hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed group"
               >
                 {status === 'loading' ? (
                   <>
@@ -198,6 +200,36 @@ export default function Contact() {
               </p>
             </form>
           )}
+        </div>
+
+        {/* Map Section */}
+        <div className="flex flex-col gap-4">
+          <div className="relative rounded-2xl overflow-hidden border border-white/8 bg-white/3 h-[320px] lg:h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.6!2d49.82047707053659!3d40.37927512249704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9be60052ab%3A0xd7852fa710c6b11a!2sCaspian%20Plaza!5e0!3m2!1sen!2saz!4v1774003866891!5m2!1sen!2saz"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(1) invert(0.9) hue-rotate(180deg) brightness(0.75) contrast(0.9)' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Koda — Caspian Plaza"
+            />
+
+            {/* Address overlay chip */}
+            <div className="absolute bottom-4 left-4 right-4">
+              <div className="inline-flex items-center gap-2 bg-[#0e0e0e]/90 backdrop-blur-md border border-white/10 px-3 py-2 rounded-xl">
+                <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-primary/20 shrink-0">
+                  <MapPin size={11} className="text-primary" />
+                </div>
+                <div>
+                  <p className="text-white text-xs font-semibold">Caspian Plaza</p>
+                  <p className="text-white/40 text-[10px]">Bakı, Azərbaycan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
 
       </div>

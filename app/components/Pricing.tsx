@@ -63,7 +63,7 @@ export default function Pricing() {
   return (
     <section
       ref={ref}
-      id="qiymət"
+      id="pricing"
       className="relative px-4 sm:px-6 lg:px-8 py-28 overflow-hidden"
     >
       {/* Background glows */}
@@ -187,7 +187,7 @@ export default function Pricing() {
 
             {/* CTA */}
             <Link
-              href="#qosul"
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary text-secondary font-bold text-sm hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 group"
             >
               İndi qeydiyyatdan keç
